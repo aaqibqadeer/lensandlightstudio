@@ -12,7 +12,7 @@ function TestimonialCard({ t }: { t: Testimonial }) {
       {/* Stars */}
       <div className="flex gap-1 mb-4" aria-label={`${t.rating} out of 5 stars`} role="img">
         {Array.from({ length: t.rating }).map((_, i) => (
-          <span key={i} className="text-accent text-lg" aria-hidden="true">
+          <span key={i} className="text-foreground text-lg" aria-hidden="true">
             ★
           </span>
         ))}

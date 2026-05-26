@@ -21,10 +21,18 @@ interface ContactFormProps {
   contact: ContactInfo
   social: SocialLink[]
   compact?: boolean
+  theme?: 'light' | 'dark'
 }
 
-export default function ContactForm({ data, contact, social, compact = false }: ContactFormProps) {
+export default function ContactForm({
+  data,
+  contact,
+  social,
+  compact = false,
+  theme = 'light',
+}: ContactFormProps) {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const isDark = theme === 'dark'
 
   const {
     register,
@@ -57,17 +65,32 @@ export default function ContactForm({ data, contact, social, compact = false }: 
   if (status === 'success') {
     return (
       <div className="text-center py-12">
-        <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center mx-auto mb-6 text-2xl" aria-hidden="true">
+        <div
+          className={cn(
+            'w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl',
+            isDark ? 'bg-background text-foreground' : 'bg-foreground text-background'
+          )}
+          aria-hidden="true"
+        >
           ✓
         </div>
-        <p className="font-display font-bold text-2xl mb-3">{data.successMessage}</p>
-        <p className="text-muted mb-6">{data.successSubMessage}</p>
+        <p className={cn('font-display font-bold text-2xl mb-3', isDark && 'text-background')}>
+          {data.successMessage}
+        </p>
+        <p className={cn('mb-6', isDark ? 'text-background/70' : 'text-muted')}>
+          {data.successSubMessage}
+        </p>
         {instagramLink && (
           <a
             href={instagramLink.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-foreground text-background text-label px-6 py-3 rounded-full hover:bg-accent hover:text-foreground transition-colors"
+            className={cn(
+              'inline-flex items-center gap-2 text-label px-6 py-3 rounded-full transition-colors',
+              isDark
+                ? 'bg-background text-foreground hover:bg-background/80'
+                : 'bg-foreground text-background hover:bg-foreground/80'
+            )}
           >
             Follow on Instagram →
           </a>
@@ -76,19 +99,26 @@ export default function ContactForm({ data, contact, social, compact = false }: 
     )
   }
 
+  // Per-theme palette
+  const borderClass = isDark ? 'border-background/30' : 'border-foreground/20'
+  const focusBorderClass = isDark ? 'focus:border-background' : 'focus:border-foreground'
+  const inputTextClass = isDark ? 'text-background' : 'text-foreground'
+  const placeholderClass = isDark ? 'placeholder:text-background/40' : 'placeholder:text-muted/60'
+  const labelClass = isDark ? 'text-background/60' : 'text-muted'
+
   const inputClass = (hasError: boolean) =>
     cn(
-      'w-full bg-transparent border-b border-foreground/20 py-3 text-base placeholder:text-muted/60 focus:outline-none focus:border-foreground transition-colors',
-      hasError && 'border-red-500 focus:border-red-500'
+      'w-full bg-transparent border-b py-3 text-base focus:outline-none transition-colors',
+      borderClass,
+      focusBorderClass,
+      inputTextClass,
+      placeholderClass,
+      hasError && 'border-red-400 focus:border-red-400'
     )
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      noValidate
-      aria-label="Contact form"
-    >
-      {/* Honeypot — hidden from real users */}
+    <form onSubmit={handleSubmit(onSubmit)} noValidate aria-label="Contact form">
+      {/* Honeypot */}
       <div aria-hidden="true" className="absolute -left-[9999px] overflow-hidden">
         <label htmlFor="website">Website</label>
         <input
@@ -103,7 +133,7 @@ export default function ContactForm({ data, contact, social, compact = false }: 
       <div className={cn('grid gap-6', compact ? 'grid-cols-1' : 'sm:grid-cols-2')}>
         {/* Name */}
         <div>
-          <label htmlFor="contact-name" className="text-label text-muted block mb-2">
+          <label htmlFor="contact-name" className={cn('text-label block mb-2', labelClass)}>
             {data.fields.name} *
           </label>
           <input
@@ -118,7 +148,7 @@ export default function ContactForm({ data, contact, social, compact = false }: 
             {...register('name')}
           />
           {errors.name && (
-            <p id="name-error" role="alert" className="text-xs text-red-500 mt-1">
+            <p id="name-error" role="alert" className="text-xs text-red-400 mt-1">
               {errors.name.message}
             </p>
           )}
@@ -126,7 +156,7 @@ export default function ContactForm({ data, contact, social, compact = false }: 
 
         {/* Email */}
         <div>
-          <label htmlFor="contact-email" className="text-label text-muted block mb-2">
+          <label htmlFor="contact-email" className={cn('text-label block mb-2', labelClass)}>
             {data.fields.email} *
           </label>
           <input
@@ -141,7 +171,7 @@ export default function ContactForm({ data, contact, social, compact = false }: 
             {...register('email')}
           />
           {errors.email && (
-            <p id="email-error" role="alert" className="text-xs text-red-500 mt-1">
+            <p id="email-error" role="alert" className="text-xs text-red-400 mt-1">
               {errors.email.message}
             </p>
           )}
@@ -149,12 +179,16 @@ export default function ContactForm({ data, contact, social, compact = false }: 
 
         {/* Budget */}
         <div>
-          <label htmlFor="contact-budget" className="text-label text-muted block mb-2">
+          <label htmlFor="contact-budget" className={cn('text-label block mb-2', labelClass)}>
             {data.fields.budget} *
           </label>
           <select
             id="contact-budget"
-            className={cn(inputClass(!!errors.budget), 'cursor-pointer appearance-none bg-background')}
+            className={cn(
+              inputClass(!!errors.budget),
+              'cursor-pointer appearance-none',
+              isDark ? '[&>option]:bg-foreground [&>option]:text-background' : '[&>option]:bg-background'
+            )}
             aria-describedby={errors.budget ? 'budget-error' : undefined}
             aria-invalid={!!errors.budget}
             defaultValue=""
@@ -170,7 +204,7 @@ export default function ContactForm({ data, contact, social, compact = false }: 
             ))}
           </select>
           {errors.budget && (
-            <p id="budget-error" role="alert" className="text-xs text-red-500 mt-1">
+            <p id="budget-error" role="alert" className="text-xs text-red-400 mt-1">
               {errors.budget.message}
             </p>
           )}
@@ -179,20 +213,26 @@ export default function ContactForm({ data, contact, social, compact = false }: 
 
       {/* Description */}
       <div className="mt-6">
-        <label htmlFor="contact-description" className="text-label text-muted block mb-2">
+        <label htmlFor="contact-description" className={cn('text-label block mb-2', labelClass)}>
           {data.fields.description}
         </label>
         <textarea
           id="contact-description"
           rows={4}
           placeholder="Tell me about your project, timeline, and any specific ideas you have in mind..."
-          className={cn(inputClass(false), 'resize-none border border-foreground/20 rounded-lg px-4 border-b')}
+          className={cn(
+            'w-full bg-transparent border rounded-lg px-4 py-3 text-base focus:outline-none transition-colors resize-none',
+            borderClass,
+            focusBorderClass,
+            inputTextClass,
+            placeholderClass
+          )}
           {...register('description')}
         />
       </div>
 
       {status === 'error' && (
-        <p role="alert" className="mt-4 text-sm text-red-500">
+        <p role="alert" className={cn('mt-4 text-sm', isDark ? 'text-red-300' : 'text-red-500')}>
           Something went wrong. Please try again or email{' '}
           <a href={`mailto:${contact.generalEmail}`} className="underline">
             {contact.generalEmail}
@@ -205,12 +245,20 @@ export default function ContactForm({ data, contact, social, compact = false }: 
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="inline-flex items-center gap-3 bg-foreground text-background text-label px-8 py-4 rounded-full hover:bg-accent hover:text-foreground transition-colors disabled:opacity-50 min-h-[48px] w-full sm:w-auto justify-center"
+          className={cn(
+            'inline-flex items-center gap-3 text-label px-8 py-4 rounded-full transition-colors disabled:opacity-50 min-h-[48px] w-full sm:w-auto justify-center border',
+            isDark
+              ? 'bg-background text-foreground border-background hover:bg-transparent hover:text-background'
+              : 'bg-foreground text-background border-foreground hover:bg-transparent hover:text-foreground'
+          )}
         >
           {status === 'loading' ? (
             <>
               <span
-                className="w-4 h-4 border-2 border-background/40 border-t-background rounded-full animate-spin"
+                className={cn(
+                  'w-4 h-4 border-2 rounded-full animate-spin',
+                  isDark ? 'border-foreground/40 border-t-foreground' : 'border-background/40 border-t-background'
+                )}
                 aria-hidden="true"
               />
               Sending…

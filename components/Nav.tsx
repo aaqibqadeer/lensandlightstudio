@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import { cn } from '@/lib/utils'
-import LiveClock from './LiveClock'
 import type { SiteConfig, NavItem, SocialLink } from '@/lib/types'
 
 interface NavProps {
@@ -29,12 +28,10 @@ export default function Nav({ site, nav, social }: NavProps) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [handleScroll])
 
-  // Close menu on route change
   useEffect(() => {
     setOpen(false)
   }, [pathname])
 
-  // Lock body scroll when menu is open
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
@@ -42,6 +39,12 @@ export default function Nav({ site, nav, social }: NavProps) {
 
   const centerLinks = nav.slice(0, 3)
   const rightLinks = nav.slice(3)
+
+  // Home page has a dark hero — show light nav text when transparent.
+  // Other pages have a light top, so use dark text.
+  const onDarkHero = pathname === '/' && !scrolled
+  const baseTextClass = onDarkHero ? 'text-background' : 'text-foreground'
+  const mutedTextClass = onDarkHero ? 'text-background/70' : 'text-muted'
 
   return (
     <>
@@ -57,16 +60,15 @@ export default function Nav({ site, nav, social }: NavProps) {
           aria-label="Main navigation"
           className="container-site flex items-center justify-between h-16 md:h-20"
         >
-          {/* Left — location + clock */}
-          <div className="hidden lg:flex items-center text-label text-muted w-64">
-            <LiveClock timezone={site.timezone} location={site.location} />
-          </div>
-
-          {/* Mobile — logo */}
+          {/* Logo — left */}
           <Link
             href="/"
             aria-label={`${site.name} — Home`}
-            className="lg:hidden font-display font-bold text-xl tracking-tight"
+            className={cn(
+              'font-display font-bold text-xl md:text-2xl tracking-tight transition-colors',
+              baseTextClass,
+              'hover:opacity-80'
+            )}
           >
             {site.logoText}
           </Link>
@@ -78,8 +80,10 @@ export default function Nav({ site, nav, social }: NavProps) {
                 <Link
                   href={item.href}
                   className={cn(
-                    'text-label transition-colors hover:text-foreground',
-                    pathname === item.href ? 'text-foreground' : 'text-muted'
+                    'text-label transition-colors',
+                    pathname === item.href ? baseTextClass : mutedTextClass,
+                    'hover:opacity-100',
+                    onDarkHero ? 'hover:text-background' : 'hover:text-foreground'
                   )}
                 >
                   {item.label.toUpperCase()}
@@ -89,18 +93,24 @@ export default function Nav({ site, nav, social }: NavProps) {
           </ul>
 
           {/* Right — desktop nav links */}
-          <ul className="hidden lg:flex items-center gap-8 w-64 justify-end" role="list">
+          <ul className="hidden lg:flex items-center gap-8 justify-end" role="list">
             {rightLinks.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   className={cn(
-                    'text-label transition-colors hover:text-foreground',
+                    'text-label transition-colors',
                     item.href === '/contact'
-                      ? 'bg-foreground text-background px-4 py-2 rounded-full hover:bg-accent hover:text-foreground'
-                      : pathname === item.href
-                        ? 'text-foreground'
-                        : 'text-muted'
+                      ? cn(
+                          'px-4 py-2 rounded-full border',
+                          onDarkHero
+                            ? 'bg-background text-foreground border-background hover:bg-transparent hover:text-background'
+                            : 'bg-foreground text-background border-foreground hover:bg-transparent hover:text-foreground'
+                        )
+                      : cn(
+                          pathname === item.href ? baseTextClass : mutedTextClass,
+                          onDarkHero ? 'hover:text-background' : 'hover:text-foreground'
+                        )
                   )}
                 >
                   {item.label.toUpperCase()}
@@ -119,19 +129,22 @@ export default function Nav({ site, nav, social }: NavProps) {
           >
             <span
               className={cn(
-                'block h-0.5 w-6 bg-foreground transition-all duration-300',
+                'block h-0.5 w-6 transition-all duration-300',
+                onDarkHero ? 'bg-background' : 'bg-foreground',
                 open && 'rotate-45 translate-y-2'
               )}
             />
             <span
               className={cn(
-                'block h-0.5 w-6 bg-foreground transition-all duration-300',
+                'block h-0.5 w-6 transition-all duration-300',
+                onDarkHero ? 'bg-background' : 'bg-foreground',
                 open && 'opacity-0'
               )}
             />
             <span
               className={cn(
-                'block h-0.5 w-6 bg-foreground transition-all duration-300',
+                'block h-0.5 w-6 transition-all duration-300',
+                onDarkHero ? 'bg-background' : 'bg-foreground',
                 open && '-rotate-45 -translate-y-2'
               )}
             />
@@ -164,7 +177,7 @@ export default function Nav({ site, nav, social }: NavProps) {
                   >
                     <Link
                       href={item.href}
-                      className="block text-3xl font-display font-bold py-3 border-b border-background/10 hover:text-accent transition-colors"
+                      className="block text-3xl font-display font-bold py-3 border-b border-background/10 hover:opacity-70 transition-opacity"
                     >
                       {item.label}
                     </Link>
@@ -172,7 +185,6 @@ export default function Nav({ site, nav, social }: NavProps) {
                 ))}
               </ul>
 
-              {/* Social links in mobile menu */}
               <div className="flex gap-6 mt-8">
                 {social.map((s) => (
                   <a
@@ -180,7 +192,7 @@ export default function Nav({ site, nav, social }: NavProps) {
                     href={s.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-label text-background/60 hover:text-accent transition-colors"
+                    className="text-label text-background/60 hover:text-background transition-colors"
                   >
                     {s.platform}
                   </a>
