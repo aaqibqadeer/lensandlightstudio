@@ -21,7 +21,7 @@ export default function ProjectsPage() {
   return (
     <>
       {/* Page header */}
-      <section aria-labelledby="projects-page-heading" className="pt-32 pb-16 bg-background">
+      <section aria-labelledby="projects-page-heading" className="pt-32 pb-16">
         <div className="container-site">
           <FadeIn>
             <p className="text-label text-muted mb-4">PORTFOLIO</p>
@@ -39,7 +39,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Grid */}
-      <section aria-label="Project grid" className="pb-20 bg-background">
+      <section aria-label="Project grid" className="pb-20">
         <div className="container-site">
           <div className="grid md:grid-cols-2 gap-4 md:gap-6">
             {projectsConfig.items.map((project, i) => (

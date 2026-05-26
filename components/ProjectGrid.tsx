@@ -19,7 +19,7 @@ export default function ProjectGrid({
   if (projects.length === 0) return null
 
   return (
-    <section aria-labelledby="projects-heading" className="section-padding bg-background">
+    <section aria-labelledby="projects-heading" className="section-padding">
       <div className="container-site">
         <div className="flex items-end justify-between mb-12">
           <FadeIn>

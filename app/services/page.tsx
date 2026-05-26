@@ -29,7 +29,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section aria-labelledby="services-page-heading" className="pt-32 pb-20 bg-background">
+      <section aria-labelledby="services-page-heading" className="pt-32 pb-20">
         <div className="container-site">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -68,7 +68,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Individual services */}
-      <section aria-label="Service listings" className="pb-20 bg-background">
+      <section aria-label="Service listings" className="pb-20">
         <div className="container-site space-y-24">
           {services.map((service, i) => (
             <FadeIn key={service.id} delay={0.1}>

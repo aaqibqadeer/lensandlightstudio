@@ -12,7 +12,7 @@
       "ogImage": "https://picsum.photos/seed/lensandlight-og/1200/630"
     },
     "theme": {
-      "background": "#F5F1E6",
+      "background": "#FFFFFB",
       "foreground": "#0A0A0A",
       "accent": "#0EA5E9",
       "muted": "#8A8578"

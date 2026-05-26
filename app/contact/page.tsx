@@ -25,7 +25,7 @@ export default function ContactPage() {
 
   return (
     <main>
-      <div className="pt-32 section-padding bg-background">
+      <div className="pt-32 section-padding">
         <div className="container-site">
           {/* Page heading */}
           <FadeIn>
