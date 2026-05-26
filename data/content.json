@@ -14,7 +14,7 @@
     "theme": {
       "background": "#F5F1E6",
       "foreground": "#0A0A0A",
-      "accent": "#FFFFFF",
+      "accent": "#0EA5E9",
       "muted": "#8A8578"
     }
   },
@@ -44,8 +44,8 @@
 
   "home": {
     "hero": {
-      "image": "https://picsum.photos/seed/lensandlight-hero/1920/1200",
-      "imageAlt": "Editorial portrait shot with dramatic natural light",
+      "image": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1920&q=80&fit=crop",
+      "imageAlt": "Dramatic editorial portrait with cinematic natural light",
       "displayName": "LENS & LIGHT",
       "tags": ["Portrait", "Architecture", "Fashion", "Documentary"],
       "role": "Professional Photography Studio"
