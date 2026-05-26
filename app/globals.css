@@ -5,7 +5,7 @@
 :root {
   --color-background: #F5F1E6;
   --color-foreground: #0A0A0A;
-  --color-accent:     #FFFFFF;
+  --color-accent:     #0EA5E9;
   --color-muted:      #8A8578;
 }
 
@@ -31,6 +31,9 @@
     color: var(--color-foreground);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Subtle photographic dot-grain pattern referencing film sensor texture */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='1' cy='1' r='0.8' fill='%230A0A0A' opacity='0.045'/%3E%3C/svg%3E");
+    background-size: 40px 40px;
   }
 
   :focus-visible {

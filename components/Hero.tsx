@@ -38,8 +38,10 @@ export default function Hero({ hero, site }: HeroProps) {
         className="object-cover object-center"
       />
 
-      {/* Gradient overlay — strong at top for nav contrast, strong at bottom for headline contrast */}
-      <div className="absolute inset-0 bg-gradient-to-b from-foreground/60 via-foreground/30 to-foreground/80" />
+      {/* Main gradient — dark at bottom for text, gentle in middle */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/80" />
+      {/* Top vignette — dedicated dark band for nav legibility */}
+      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/70 to-transparent" />
 
       {/* Top bar — role label */}
       <motion.div

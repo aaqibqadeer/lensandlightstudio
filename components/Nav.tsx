@@ -50,10 +50,12 @@ export default function Nav({ site, nav, social }: NavProps) {
     <>
       <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+          'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
           scrolled
-            ? 'bg-background/95 backdrop-blur-sm shadow-sm border-b border-foreground/5'
-            : 'bg-transparent'
+            ? 'bg-background/95 backdrop-blur-md shadow-sm border-b border-foreground/5'
+            : onDarkHero
+              ? 'bg-black/15 backdrop-blur-md border-b border-white/10'
+              : 'bg-transparent'
         )}
       >
         <nav
@@ -65,7 +67,7 @@ export default function Nav({ site, nav, social }: NavProps) {
             href="/"
             aria-label={`${site.name} — Home`}
             className={cn(
-              'font-display font-bold text-xl md:text-2xl tracking-tight transition-colors',
+              'font-display font-bold text-2xl md:text-3xl tracking-tight transition-colors select-none',
               baseTextClass,
               'hover:opacity-80'
             )}
