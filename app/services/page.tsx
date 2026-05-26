@@ -86,7 +86,7 @@ export default function ServicesPage() {
                   <ul className="space-y-2 mb-6" aria-label="Deliverables">
                     {service.deliverables.map((d) => (
                       <li key={d} className="flex items-start gap-2 text-sm">
-                        <span className="text-accent mt-0.5" aria-hidden="true">✓</span>
+                        <span className="text-foreground mt-0.5" aria-hidden="true">✓</span>
                         {d}
                       </li>
                     ))}
@@ -102,7 +102,7 @@ export default function ServicesPage() {
 
                   <div className="flex items-center gap-6">
                     <p className="text-2xl font-bold">
-                      From <span className="text-accent">{service.priceFrom}</span>
+                      From <span>{service.priceFrom}</span>
                     </p>
                     <Link
                       href="/contact"

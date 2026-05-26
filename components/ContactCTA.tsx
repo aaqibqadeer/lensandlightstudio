@@ -21,7 +21,7 @@ export default function ContactCTA({ data, contact, social }: ContactCTAProps) {
         </FadeIn>
 
         <FadeIn delay={0.15}>
-          <ContactForm data={data} contact={contact} social={social} compact />
+          <ContactForm data={data} contact={contact} social={social} compact theme="dark" />
         </FadeIn>
       </div>
     </section>

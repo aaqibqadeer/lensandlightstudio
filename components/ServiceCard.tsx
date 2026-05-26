@@ -43,7 +43,7 @@ export default function ServiceCard({ service, preview = false }: ServiceCardPro
         <ul className="space-y-2 mb-5 flex-1" aria-label="What's included">
           {service.deliverables.map((d) => (
             <li key={d} className="flex items-start gap-2 text-sm">
-              <span className="text-accent mt-0.5" aria-hidden="true">
+              <span className="text-foreground mt-0.5" aria-hidden="true">
                 ✓
               </span>
               {d}
