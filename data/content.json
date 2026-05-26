@@ -1,20 +1,20 @@
 {
   "site": {
-    "name": "Alex Morgan",
-    "tagline": "Professional Photographer",
+    "name": "Lens & Light Studio",
+    "tagline": "Professional Photography Studio",
     "location": "New York, USA",
     "timezone": "America/New_York",
-    "logoText": "AM",
+    "logoText": "L&L",
     "seo": {
-      "title": "Alex Morgan — Professional Photographer",
-      "description": "New York-based professional photographer specializing in portraits, editorial, engagement, and event photography. Available for bookings worldwide.",
-      "url": "https://alexmorganphoto.com",
-      "ogImage": "/images/og.jpg"
+      "title": "Lens & Light Studio — Professional Photography",
+      "description": "New York-based photography studio specializing in portraits, editorial, engagement, and event photography. Available for bookings worldwide.",
+      "url": "https://lensandlightstudio.com",
+      "ogImage": "https://picsum.photos/seed/lensandlight-og/1200/630"
     },
     "theme": {
       "background": "#F5F1E6",
       "foreground": "#0A0A0A",
-      "accent": "#F5E62B",
+      "accent": "#FFFFFF",
       "muted": "#8A8578"
     }
   },
@@ -34,9 +34,9 @@
   ],
 
   "contact": {
-    "generalEmail": "hello@alexmorganphoto.com",
+    "generalEmail": "hello@lensandlightstudio.com",
     "generalPhone": "+1 (212) 555-0147",
-    "collabEmail": "collab@alexmorganphoto.com",
+    "collabEmail": "collab@lensandlightstudio.com",
     "collabPhone": "+1 (212) 555-0198",
     "address": "340 W 34th Street, New York, NY 10001",
     "budgetOptions": ["< $500", "$500 – $1,500", "$1,500 – $5,000", "$5,000+"]
@@ -44,11 +44,11 @@
 
   "home": {
     "hero": {
-      "image": "/images/hero.jpg",
-      "imageAlt": "Alex Morgan capturing a golden-hour portrait session in Central Park",
-      "displayName": "ALEX MORGAN",
+      "image": "https://picsum.photos/seed/lensandlight-hero/1920/1200",
+      "imageAlt": "Editorial portrait shot with dramatic natural light",
+      "displayName": "LENS & LIGHT",
       "tags": ["Portrait", "Architecture", "Fashion", "Documentary"],
-      "role": "Professional Photographer"
+      "role": "Professional Photography Studio"
     },
     "aboutTeaser": {
       "eyebrow": "About",
@@ -96,7 +96,7 @@
       ],
       "priceFrom": "$299",
       "keywords": ["Headshots", "Lifestyle", "Editorial", "Personal Branding", "Executive"],
-      "image": "/images/services/portrait.jpg",
+      "image": "https://picsum.photos/seed/svc-portrait/1200/900",
       "imageAlt": "Portrait photography session with warm natural lighting"
     },
     {
@@ -113,7 +113,7 @@
       ],
       "priceFrom": "$600",
       "keywords": ["Romance", "Love", "Intimacy", "Pre-Wedding", "Golden Hour"],
-      "image": "/images/services/couples.jpg",
+      "image": "https://picsum.photos/seed/svc-couples/1200/900",
       "imageAlt": "Couple sharing a candid laugh during a golden-hour engagement session"
     },
     {
@@ -130,7 +130,7 @@
       ],
       "priceFrom": "$1,200",
       "keywords": ["Corporate", "Celebration", "Conferences", "Galas", "Launch Events"],
-      "image": "/images/services/event.jpg",
+      "image": "https://picsum.photos/seed/svc-event/1200/900",
       "imageAlt": "Candid event photography showing guests networking at a rooftop gathering"
     }
   ],
@@ -142,7 +142,7 @@
         "id": "falling-in-love",
         "title": "Falling in Love",
         "year": 2024,
-        "cover": "/images/projects/falling-in-love.jpg",
+        "cover": "https://picsum.photos/seed/falling-in-love/1200/900",
         "coverAlt": "Couple holding hands walking through autumn Central Park leaves",
         "gallery": [],
         "description": "An intimate engagement session winding through Central Park as October light turned everything golden.",
@@ -152,7 +152,7 @@
         "id": "corazon",
         "title": "Corazón",
         "year": 2024,
-        "cover": "/images/projects/corazon.jpg",
+        "cover": "https://picsum.photos/seed/corazon/1200/900",
         "coverAlt": "Editorial portrait series set in a sun-drenched Havana courtyard",
         "gallery": [],
         "description": "A personal editorial project exploring identity and memory through portraiture in Havana.",
@@ -162,7 +162,7 @@
         "id": "midnight-confessions",
         "title": "Midnight Confessions",
         "year": 2023,
-        "cover": "/images/projects/midnight-confessions.jpg",
+        "cover": "https://picsum.photos/seed/midnight-confessions/1200/900",
         "coverAlt": "Moody night portrait with neon reflections on wet pavement",
         "gallery": [],
         "description": "A late-night portrait series shot entirely on city streets with available neon and streetlight.",
@@ -172,7 +172,7 @@
         "id": "caught-in-the-moment",
         "title": "Caught in the Moment",
         "year": 2023,
-        "cover": "/images/projects/caught-in-the-moment.jpg",
+        "cover": "https://picsum.photos/seed/caught-in-the-moment/1200/900",
         "coverAlt": "Documentary street photography — a child chasing pigeons in Times Square",
         "gallery": [],
         "description": "Street documentary series capturing unguarded human moments across Manhattan.",
@@ -182,7 +182,7 @@
         "id": "architecture-of-light",
         "title": "Architecture of Light",
         "year": 2023,
-        "cover": "/images/projects/architecture-of-light.jpg",
+        "cover": "https://picsum.photos/seed/architecture-of-light/1200/900",
         "coverAlt": "Long-exposure architectural image of the Oculus transportation hub",
         "gallery": [],
         "description": "A geometric exploration of New York's most iconic modern structures at dusk and dawn.",
@@ -192,7 +192,7 @@
         "id": "the-quiet-season",
         "title": "The Quiet Season",
         "year": 2022,
-        "cover": "/images/projects/the-quiet-season.jpg",
+        "cover": "https://picsum.photos/seed/the-quiet-season/1200/900",
         "coverAlt": "Snowy Central Park bench in the blue hour of a January morning",
         "gallery": [],
         "description": "A meditative winter series — empty parks, frozen ponds, and the city at its most introspective.",
@@ -205,54 +205,54 @@
     {
       "id": "t1",
       "rating": 5,
-      "quote": "Alex has an extraordinary ability to make people feel at ease in front of the camera. Our brand shoot exceeded every expectation — the images are breathtaking.",
+      "quote": "the Lens & Light team has an extraordinary ability to make people feel at ease in front of the camera. Our brand shoot exceeded every expectation — the images are breathtaking.",
       "name": "James T.",
       "role": "CEO, Rackspace",
-      "avatar": "/images/avatars/james.jpg"
+      "avatar": "https://picsum.photos/seed/avatar-james/200/200"
     },
     {
       "id": "t2",
       "rating": 5,
-      "quote": "We've worked with dozens of photographers over the years, and Alex stands in a class of their own. The engagement session felt effortless and the photos are pure magic.",
+      "quote": "We've worked with dozens of photographers over the years, and the Lens & Light team stands in a class of their own. The engagement session felt effortless and the photos are pure magic.",
       "name": "Sofia & Marco R.",
       "role": "Married, 2024",
-      "avatar": "/images/avatars/sofia.jpg"
+      "avatar": "https://picsum.photos/seed/avatar-sofia/200/200"
     },
     {
       "id": "t3",
       "rating": 5,
-      "quote": "Our annual conference coverage was flawless. Alex captured the energy of 500 attendees without missing a single keynote moment. We'll definitely be booking again.",
+      "quote": "Our annual conference coverage was flawless. the Lens & Light team captured the energy of 500 attendees without missing a single keynote moment. We'll definitely be booking again.",
       "name": "Priya K.",
       "role": "Events Director, TechSummit NYC",
-      "avatar": "/images/avatars/priya.jpg"
+      "avatar": "https://picsum.photos/seed/avatar-priya/200/200"
     },
     {
       "id": "t4",
       "rating": 5,
-      "quote": "The portraits Alex delivered for our executive team transformed our website presence overnight. Professional, warm, and incredibly fast to turn around.",
+      "quote": "The portraits the Lens & Light team delivered for our executive team transformed our website presence overnight. Professional, warm, and incredibly fast to turn around.",
       "name": "David L.",
       "role": "Head of Marketing, New Balance",
-      "avatar": "/images/avatars/david.jpg"
+      "avatar": "https://picsum.photos/seed/avatar-david/200/200"
     },
     {
       "id": "t5",
       "rating": 5,
-      "quote": "Booking Alex was the best decision we made for our product launch. The images were on our homepage within 48 hours and the response has been overwhelming.",
+      "quote": "Booking the Lens & Light team was the best decision we made for our product launch. The images were on our homepage within 48 hours and the response has been overwhelming.",
       "name": "Yuki M.",
       "role": "Founder, Arco Studio",
-      "avatar": "/images/avatars/yuki.jpg"
+      "avatar": "https://picsum.photos/seed/avatar-yuki/200/200"
     }
   ],
 
   "about": {
     "eyebrow": "About me",
-    "headline": "Hi, I'm Alex — an independent professional photographer based in New York City.",
-    "body": "I've spent a decade building a practice rooted in two beliefs: that the camera should be invisible, and that every subject deserves to feel truly seen. I work across portraiture, editorial, commercial, and documentary photography — always chasing the image that feels honest. When I'm not on set, I mentor emerging photographers and travel to find new light.",
-    "image": "/images/about/alex.jpg",
-    "imageAlt": "Alex Morgan photographing a subject in a sunlit loft studio",
+    "headline": "We're Lens & Light Studio — a team of professional photographers based in New York City.",
+    "body": "We've spent over a decade building a practice rooted in two beliefs: that the camera should be invisible, and that every subject deserves to feel truly seen. Our team works across portraiture, editorial, commercial, and documentary photography — always chasing the image that feels honest. When we're not on set, we mentor emerging photographers and travel to find new light.",
+    "image": "https://picsum.photos/seed/lensandlight-about/900/1200",
+    "imageAlt": "Lens & Light Studio photographer on a shoot in a sunlit loft",
     "whatIDo": {
       "title": "What I Do",
-      "body": "I help individuals, brands, and organizations tell their stories through photography that is technically precise and emotionally resonant. From a single executive portrait to a multi-day brand campaign, I bring the same level of care and craft to every frame.",
+      "body": "We help individuals, brands, and organizations tell their stories through photography that is technically precise and emotionally resonant. From a single executive portrait to a multi-day brand campaign, we bring the same level of care and craft to every frame.",
       "stats": [
         { "value": "100+", "label": "Global Photography Network" },
         { "value": "50+", "label": "Successful Photo Projects" },
@@ -273,17 +273,17 @@
     "clients": ["Nike", "New Balance", "Apple", "Logitech", "Starbucks", "Hermès", "Vogue", "The New York Times"],
     "brandTestimonials": [
       {
-        "quote": "Alex's eye for light and narrative is unmatched. The campaign imagery they delivered for us doubled our social engagement.",
+        "quote": "the Lens & Light team's eye for light and narrative is unmatched. The campaign imagery they delivered for us doubled our social engagement.",
         "name": "Sofia Rivera",
         "role": "Creative Director, New Balance"
       },
       {
-        "quote": "We needed photographs that felt real and alive, not over-produced. Alex delivered exactly that — images we're still using three years later.",
+        "quote": "We needed photographs that felt real and alive, not over-produced. the Lens & Light team delivered exactly that — images we're still using three years later.",
         "name": "Tom Hayashi",
         "role": "Brand Manager, Starbucks"
       },
       {
-        "quote": "Hiring Alex for our lookbook was one of the best investments of the season. The quality speaks for itself.",
+        "quote": "Hiring the Lens & Light team for our lookbook was one of the best investments of the season. The quality speaks for itself.",
         "name": "Isabelle Voss",
         "role": "Head of Styling, Hermès New York"
       }

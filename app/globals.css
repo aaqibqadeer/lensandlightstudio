@@ -5,7 +5,7 @@
 :root {
   --color-background: #F5F1E6;
   --color-foreground: #0A0A0A;
-  --color-accent:     #F5E62B;
+  --color-accent:     #FFFFFF;
   --color-muted:      #8A8578;
 }
 
@@ -34,7 +34,7 @@
   }
 
   :focus-visible {
-    outline: 3px solid var(--color-accent);
+    outline: 2px solid var(--color-foreground);
     outline-offset: 3px;
   }
 
