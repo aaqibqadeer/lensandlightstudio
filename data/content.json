@@ -1,0 +1,341 @@
+{
+  "site": {
+    "name": "Alex Morgan",
+    "tagline": "Professional Photographer",
+    "location": "New York, USA",
+    "timezone": "America/New_York",
+    "logoText": "AM",
+    "seo": {
+      "title": "Alex Morgan — Professional Photographer",
+      "description": "New York-based professional photographer specializing in portraits, editorial, engagement, and event photography. Available for bookings worldwide.",
+      "url": "https://alexmorganphoto.com",
+      "ogImage": "/images/og.jpg"
+    },
+    "theme": {
+      "background": "#F5F1E6",
+      "foreground": "#0A0A0A",
+      "accent": "#F5E62B",
+      "muted": "#8A8578"
+    }
+  },
+
+  "navigation": [
+    { "label": "Home", "href": "/" },
+    { "label": "Projects", "href": "/projects" },
+    { "label": "Services", "href": "/services" },
+    { "label": "About Us", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+
+  "social": [
+    { "platform": "Instagram", "url": "https://instagram.com/alexmorganphoto" },
+    { "platform": "X", "url": "https://x.com/alexmorganphoto" },
+    { "platform": "LinkedIn", "url": "https://linkedin.com/in/alexmorganphoto" }
+  ],
+
+  "contact": {
+    "generalEmail": "hello@alexmorganphoto.com",
+    "generalPhone": "+1 (212) 555-0147",
+    "collabEmail": "collab@alexmorganphoto.com",
+    "collabPhone": "+1 (212) 555-0198",
+    "address": "340 W 34th Street, New York, NY 10001",
+    "budgetOptions": ["< $500", "$500 – $1,500", "$1,500 – $5,000", "$5,000+"]
+  },
+
+  "home": {
+    "hero": {
+      "image": "/images/hero.jpg",
+      "imageAlt": "Alex Morgan capturing a golden-hour portrait session in Central Park",
+      "displayName": "ALEX MORGAN",
+      "tags": ["Portrait", "Architecture", "Fashion", "Documentary"],
+      "role": "Professional Photographer"
+    },
+    "aboutTeaser": {
+      "eyebrow": "About",
+      "heading": "Where Spontaneity Takes the Lead",
+      "body": "I believe the most powerful images happen in unscripted moments — a glance, a laugh, a shaft of light. My approach blends careful composition with the freedom to follow what's alive in the room.",
+      "ctaLabel": "Learn More About Me",
+      "ctaHref": "/about",
+      "pillars": [
+        {
+          "title": "My Vision",
+          "body": "To create photographs that outlast the moment — images that feel true years from now and carry the emotional weight of being there."
+        },
+        {
+          "title": "My Mission",
+          "body": "Bring world-class editorial craft to every project, whether it's an intimate couple session or a global brand campaign."
+        }
+      ]
+    },
+    "stats": [
+      { "value": "400+", "label": "Projects Delivered" },
+      { "value": "652", "label": "Stunning Works" },
+      { "value": "10+", "label": "Years of Experience" }
+    ],
+    "benefitStatement": "Every photograph I take is driven by a single question: will this still feel meaningful in ten years? I combine technical precision with genuine human connection to ensure the answer is always yes.",
+    "featuredProjectIds": ["falling-in-love", "corazon", "midnight-confessions", "caught-in-the-moment"],
+    "mobileBookingBar": {
+      "enabled": true,
+      "label": "Book a Session",
+      "href": "/contact"
+    }
+  },
+
+  "services": [
+    {
+      "id": "portrait",
+      "title": "Portrait Photography",
+      "category": "Portraits",
+      "description": "From executive headshots to intimate lifestyle portraits, I create images that reveal the real you — confident, authentic, and timeless. Every session is tailored to your vision, brand, and personality.",
+      "deliverables": [
+        "1–2 hour on-location or studio session",
+        "Professional skin retouching on all selects",
+        "Private online gallery with download rights",
+        "30+ high-resolution edited images",
+        "Usage rights for personal & commercial use"
+      ],
+      "priceFrom": "$299",
+      "keywords": ["Headshots", "Lifestyle", "Editorial", "Personal Branding", "Executive"],
+      "image": "/images/services/portrait.jpg",
+      "imageAlt": "Portrait photography session with warm natural lighting"
+    },
+    {
+      "id": "couples",
+      "title": "Engagement & Couples",
+      "category": "Wedding",
+      "description": "Love looks best when it's unposed. My engagement sessions follow your chemistry, exploring locations that feel meaningful to you both — then letting the story unfold naturally.",
+      "deliverables": [
+        "Custom 2-hour shoot at a location of your choice",
+        "Outfit guidance & styling consultation",
+        "30+ beautifully edited high-resolution images",
+        "Private gallery for easy sharing",
+        "Print release included"
+      ],
+      "priceFrom": "$600",
+      "keywords": ["Romance", "Love", "Intimacy", "Pre-Wedding", "Golden Hour"],
+      "image": "/images/services/couples.jpg",
+      "imageAlt": "Couple sharing a candid laugh during a golden-hour engagement session"
+    },
+    {
+      "id": "event",
+      "title": "Event Photography",
+      "category": "Event",
+      "description": "Corporate conferences, gallery openings, product launches, celebrations — I document the energy, the connections, and the details that make your event worth remembering.",
+      "deliverables": [
+        "Full-day authentic coverage (up to 8 hours)",
+        "Ceremonies, candid moments & keynotes",
+        "200+ high-quality edited images",
+        "48-hour turnaround on a selection of key shots",
+        "Commercial licensing available"
+      ],
+      "priceFrom": "$1,200",
+      "keywords": ["Corporate", "Celebration", "Conferences", "Galas", "Launch Events"],
+      "image": "/images/services/event.jpg",
+      "imageAlt": "Candid event photography showing guests networking at a rooftop gathering"
+    }
+  ],
+
+  "projects": {
+    "enableLightbox": false,
+    "items": [
+      {
+        "id": "falling-in-love",
+        "title": "Falling in Love",
+        "year": 2024,
+        "cover": "/images/projects/falling-in-love.jpg",
+        "coverAlt": "Couple holding hands walking through autumn Central Park leaves",
+        "gallery": [],
+        "description": "An intimate engagement session winding through Central Park as October light turned everything golden.",
+        "featured": true
+      },
+      {
+        "id": "corazon",
+        "title": "Corazón",
+        "year": 2024,
+        "cover": "/images/projects/corazon.jpg",
+        "coverAlt": "Editorial portrait series set in a sun-drenched Havana courtyard",
+        "gallery": [],
+        "description": "A personal editorial project exploring identity and memory through portraiture in Havana.",
+        "featured": true
+      },
+      {
+        "id": "midnight-confessions",
+        "title": "Midnight Confessions",
+        "year": 2023,
+        "cover": "/images/projects/midnight-confessions.jpg",
+        "coverAlt": "Moody night portrait with neon reflections on wet pavement",
+        "gallery": [],
+        "description": "A late-night portrait series shot entirely on city streets with available neon and streetlight.",
+        "featured": true
+      },
+      {
+        "id": "caught-in-the-moment",
+        "title": "Caught in the Moment",
+        "year": 2023,
+        "cover": "/images/projects/caught-in-the-moment.jpg",
+        "coverAlt": "Documentary street photography — a child chasing pigeons in Times Square",
+        "gallery": [],
+        "description": "Street documentary series capturing unguarded human moments across Manhattan.",
+        "featured": true
+      },
+      {
+        "id": "architecture-of-light",
+        "title": "Architecture of Light",
+        "year": 2023,
+        "cover": "/images/projects/architecture-of-light.jpg",
+        "coverAlt": "Long-exposure architectural image of the Oculus transportation hub",
+        "gallery": [],
+        "description": "A geometric exploration of New York's most iconic modern structures at dusk and dawn.",
+        "featured": false
+      },
+      {
+        "id": "the-quiet-season",
+        "title": "The Quiet Season",
+        "year": 2022,
+        "cover": "/images/projects/the-quiet-season.jpg",
+        "coverAlt": "Snowy Central Park bench in the blue hour of a January morning",
+        "gallery": [],
+        "description": "A meditative winter series — empty parks, frozen ponds, and the city at its most introspective.",
+        "featured": false
+      }
+    ]
+  },
+
+  "testimonials": [
+    {
+      "id": "t1",
+      "rating": 5,
+      "quote": "Alex has an extraordinary ability to make people feel at ease in front of the camera. Our brand shoot exceeded every expectation — the images are breathtaking.",
+      "name": "James T.",
+      "role": "CEO, Rackspace",
+      "avatar": "/images/avatars/james.jpg"
+    },
+    {
+      "id": "t2",
+      "rating": 5,
+      "quote": "We've worked with dozens of photographers over the years, and Alex stands in a class of their own. The engagement session felt effortless and the photos are pure magic.",
+      "name": "Sofia & Marco R.",
+      "role": "Married, 2024",
+      "avatar": "/images/avatars/sofia.jpg"
+    },
+    {
+      "id": "t3",
+      "rating": 5,
+      "quote": "Our annual conference coverage was flawless. Alex captured the energy of 500 attendees without missing a single keynote moment. We'll definitely be booking again.",
+      "name": "Priya K.",
+      "role": "Events Director, TechSummit NYC",
+      "avatar": "/images/avatars/priya.jpg"
+    },
+    {
+      "id": "t4",
+      "rating": 5,
+      "quote": "The portraits Alex delivered for our executive team transformed our website presence overnight. Professional, warm, and incredibly fast to turn around.",
+      "name": "David L.",
+      "role": "Head of Marketing, New Balance",
+      "avatar": "/images/avatars/david.jpg"
+    },
+    {
+      "id": "t5",
+      "rating": 5,
+      "quote": "Booking Alex was the best decision we made for our product launch. The images were on our homepage within 48 hours and the response has been overwhelming.",
+      "name": "Yuki M.",
+      "role": "Founder, Arco Studio",
+      "avatar": "/images/avatars/yuki.jpg"
+    }
+  ],
+
+  "about": {
+    "eyebrow": "About me",
+    "headline": "Hi, I'm Alex — an independent professional photographer based in New York City.",
+    "body": "I've spent a decade building a practice rooted in two beliefs: that the camera should be invisible, and that every subject deserves to feel truly seen. I work across portraiture, editorial, commercial, and documentary photography — always chasing the image that feels honest. When I'm not on set, I mentor emerging photographers and travel to find new light.",
+    "image": "/images/about/alex.jpg",
+    "imageAlt": "Alex Morgan photographing a subject in a sunlit loft studio",
+    "whatIDo": {
+      "title": "What I Do",
+      "body": "I help individuals, brands, and organizations tell their stories through photography that is technically precise and emotionally resonant. From a single executive portrait to a multi-day brand campaign, I bring the same level of care and craft to every frame.",
+      "stats": [
+        { "value": "100+", "label": "Global Photography Network" },
+        { "value": "50+", "label": "Successful Photo Projects" },
+        { "value": "$14M+", "label": "Photography Revenue" }
+      ]
+    },
+    "tools": [
+      { "name": "Canon EOS R5", "description": "Primary camera body for all studio and on-location work", "category": "Camera" },
+      { "name": "Canon EOS R6 Mark II", "description": "Backup body and preferred choice for fast-moving events", "category": "Camera" },
+      { "name": "RF 50mm f/1.2L", "description": "My go-to portrait lens — renders skin beautifully", "category": "Lens" },
+      { "name": "RF 85mm f/1.2L DS", "description": "Defocus Smoothing version for creamy background separation", "category": "Lens" },
+      { "name": "RF 24-70mm f/2.8L", "description": "Versatile zoom for events and environmental portraits", "category": "Lens" },
+      { "name": "Adobe Lightroom Classic", "description": "Primary culling, color grading, and export workflow", "category": "Software" },
+      { "name": "Adobe Photoshop", "description": "High-end retouching and composite work", "category": "Software" },
+      { "name": "Profoto B10 Plus", "description": "Off-camera flash system for location and studio lighting", "category": "Lighting" },
+      { "name": "Carbon fiber tripod", "description": "Gitzo GT3543LS — indispensable for architecture work", "category": "Support" }
+    ],
+    "clients": ["Nike", "New Balance", "Apple", "Logitech", "Starbucks", "Hermès", "Vogue", "The New York Times"],
+    "brandTestimonials": [
+      {
+        "quote": "Alex's eye for light and narrative is unmatched. The campaign imagery they delivered for us doubled our social engagement.",
+        "name": "Sofia Rivera",
+        "role": "Creative Director, New Balance"
+      },
+      {
+        "quote": "We needed photographs that felt real and alive, not over-produced. Alex delivered exactly that — images we're still using three years later.",
+        "name": "Tom Hayashi",
+        "role": "Brand Manager, Starbucks"
+      },
+      {
+        "quote": "Hiring Alex for our lookbook was one of the best investments of the season. The quality speaks for itself.",
+        "name": "Isabelle Voss",
+        "role": "Head of Styling, Hermès New York"
+      }
+    ],
+    "awards": [
+      {
+        "title": "Winner — Best Portrait Series",
+        "organization": "Annual Lens Masters Awards",
+        "project": "Midnight Confessions",
+        "year": 2024
+      },
+      {
+        "title": "Honorable Mention — Documentary Photography",
+        "organization": "International Photography Guild",
+        "project": "Caught in the Moment",
+        "year": 2023
+      },
+      {
+        "title": "Finalist — Commercial Photographer of the Year",
+        "organization": "PDN Photo Annual",
+        "project": "New Balance Spring Campaign",
+        "year": 2023
+      },
+      {
+        "title": "Winner — Best Landscape Shot",
+        "organization": "Outdoor Photographer Awards",
+        "project": "The Quiet Season",
+        "year": 2022
+      }
+    ]
+  },
+
+  "contactPage": {
+    "eyebrow": "Contact",
+    "heading": "Contact Us",
+    "intro": "Passionate about photography that moves people? Let's create something together.",
+    "formHeading": "Let's Talk",
+    "formIntro": "Eager to bring your vision to life? Tell me about your project and I'll be in touch within 48 hours.",
+    "fields": {
+      "name": "Full Name",
+      "email": "Your Email",
+      "budget": "Your Budget",
+      "description": "Tell me about your project",
+      "submit": "Submit Now"
+    },
+    "successMessage": "Thank you — I'll be in touch within 48 hours.",
+    "successSubMessage": "While you wait, come say hello on Instagram."
+  },
+
+  "footer": {
+    "tagline": "Capture life's most meaningful moments — from quiet everyday beauty to landmark celebrations.",
+    "role": "Professional Photographer",
+    "rights": "All rights reserved © 2025"
+  }
+}
