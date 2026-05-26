@@ -8,7 +8,7 @@ interface StatStripProps {
 
 export default function StatStrip({ stats, body }: StatStripProps) {
   return (
-    <section aria-labelledby="stats-heading" className="section-padding bg-background">
+    <section aria-labelledby="stats-heading" className="section-padding">
       <div className="container-site">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Stats */}

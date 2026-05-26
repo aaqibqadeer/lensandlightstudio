@@ -8,7 +8,7 @@ interface AboutTeaserProps {
 
 export default function AboutTeaser({ data }: AboutTeaserProps) {
   return (
-    <section aria-labelledby="about-teaser-heading" className="section-padding bg-background">
+    <section aria-labelledby="about-teaser-heading" className="section-padding">
       <div className="container-site">
         <FadeIn>
           <p className="text-label text-muted mb-4">{data.eyebrow.toUpperCase()}</p>

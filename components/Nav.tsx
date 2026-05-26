@@ -75,17 +75,18 @@ export default function Nav({ site, nav, social }: NavProps) {
             {site.logoText}
           </Link>
 
-          {/* Center — desktop nav links */}
+          {/* Center — desktop nav links: all full color, active is underlined */}
           <ul className="hidden lg:flex items-center gap-8" role="list">
             {centerLinks.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
+                  aria-current={pathname === item.href ? 'page' : undefined}
                   className={cn(
-                    'text-label transition-colors',
-                    pathname === item.href ? baseTextClass : mutedTextClass,
-                    'hover:opacity-100',
-                    onDarkHero ? 'hover:text-background' : 'hover:text-foreground'
+                    'text-label transition-opacity pb-1 hover:opacity-80',
+                    baseTextClass,
+                    pathname === item.href &&
+                      'underline underline-offset-8 decoration-2 decoration-current'
                   )}
                 >
                   {item.label.toUpperCase()}

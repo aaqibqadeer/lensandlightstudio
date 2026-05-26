@@ -33,7 +33,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Bio */}
-      <section aria-labelledby="about-heading" className="pt-32 pb-20 bg-background">
+      <section aria-labelledby="about-heading" className="pt-32 pb-20">
         <div className="container-site">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
@@ -92,7 +92,7 @@ export default function AboutPage() {
       <Clients clients={about.clients} />
 
       {/* Brand testimonials */}
-      <section aria-labelledby="brand-testimonials-heading" className="section-padding bg-background">
+      <section aria-labelledby="brand-testimonials-heading" className="section-padding">
         <div className="container-site">
           <FadeIn>
             <p className="text-label text-muted mb-4">WHAT BRANDS ARE SAYING</p>
